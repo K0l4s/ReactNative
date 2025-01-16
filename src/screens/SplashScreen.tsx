@@ -1,4 +1,4 @@
-import { View, Text, ImageBackground, Image, ActivityIndicator } from 'react-native'
+import { ImageBackground, Image, ActivityIndicator } from 'react-native'
 import React from 'react'
 import { appInfo } from '../contstants/appInfo'
 import { SpaceComponent } from '../components'
