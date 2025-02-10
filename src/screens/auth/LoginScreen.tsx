@@ -15,7 +15,7 @@ const LoginScreen = () => {
   const [isDisable, setIsDisable] = useState(true);
   const navigation: any = useNavigation();
   return (
-    <ContainerComponent isImageBackground={false} isScroll>
+    <ContainerComponent isImageBackground={true} isScroll>
       <SectionComponent
         styles={{
           justifyContent: 'center',
@@ -41,7 +41,7 @@ const LoginScreen = () => {
           onChange={val => setPassword(val)}
           isPassword
           allowClear
-          affix={<Sms size={22} color={appColor.gray} />} />
+          affix={<Lock size={22} color={appColor.gray} />} />
         <RowComponent justify='space-between'>
           <RowComponent onPress={() => setIsRemember(!isRemember)}>
             <Switch

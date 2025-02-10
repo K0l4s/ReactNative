@@ -1,7 +1,6 @@
 import { createStackNavigator } from '@react-navigation/stack'
 import React from 'react'
-import { LoginScreen } from '../screens'
-// import OnbroadingScreen from '../screens/auth/OnbroadingScreen'
+import { LoginScreen, OnbroadingScreen } from '../screens'
 const AuthNavigator = () => {
   const Stack = createStackNavigator()
   return (
@@ -9,8 +8,9 @@ const AuthNavigator = () => {
       screenOptions={{
         headerShown: false,
       }}>
-      {/* <Stack.Screen name="OnbroadingScreen" component={OnbroadingScreen} /> */}
-      <Stack.Screen name="LoginScreen" component={LoginScreen} />
+  <Stack.Screen name="OnbroadingScreen" component={OnbroadingScreen} />
+  <Stack.Screen name="LoginScreen" component={LoginScreen} />
+
     </Stack.Navigator>
   )
 }

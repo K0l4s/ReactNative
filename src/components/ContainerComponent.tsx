@@ -9,6 +9,7 @@ import { fontFamilies } from '../contstants/fontFamilies';
 import { ScrollView } from 'react-native-gesture-handler';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import { globalStyles } from '../style/globalStyles';
+import { opacity } from 'react-native-reanimated/lib/typescript/Colors';
 
 interface Props {
     isImageBackground?: boolean;
@@ -60,11 +61,12 @@ const ContainerComponent = (props: Props) => {
     );
     return isImageBackground ? (
         <ImageBackground
-            source={require('../assets/images/splash-img.png')}
-            style={{ flex: 1 }}
+            source={require('../assets/images/onboarding-1.png')}
+            style={{ flex: 1, position: 'absolute', width: '100%', height: '100%' }}
             imageStyle={{ flex: 1 }}>
-            <SafeAreaView style={[globalStyles.container]}>
+            <SafeAreaView style={[globalStyles.container, { flex: 1 }]}>
                 <View>{headerComponent()}</View>
+                {returnContainer}
             </SafeAreaView>
         </ImageBackground>
     ) : (
